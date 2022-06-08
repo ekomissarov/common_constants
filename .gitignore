@@ -1,0 +1,7 @@
+*.log
+*.dump
+alldata/
+credentials/
+.idea/
+__pycache__/
+venv/

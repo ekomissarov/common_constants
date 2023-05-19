@@ -69,7 +69,7 @@ class EnviVar:
                         line = line.strip()
                         if not line or line.startswith("#"):
                             continue
-                        line = list(re.search('export\s+(\w+)=\"(.*)\"', line).groups())
+                        line = list(re.search('export\s+([\w\-]+)=\"(.*)\"', line).groups())
                         self.__set_env(*line)
                 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = f"{cred_dir}{os.environ['GOOGLE_APPLICATION_CREDENTIALS']}"
                 EnviVar.credentials_is_ok = True
